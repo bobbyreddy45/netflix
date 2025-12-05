@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c939d0e917.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="app">
+        <!-- Navbar -->
+        <div class="nav" id="nav">
+            <div class="nav__left">
+                <img class="nav__logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+                    alt="Netflix Logo">
+                <ul class="nav__links">
+                    <li class="nav__link active" id="nav-home">Home</li>
+                    <li class="nav__link" id="nav-series">Series</li>
+                    <li class="nav__link" id="nav-movies">Movies</li>
+                    <li class="nav__link" id="nav-originals">Originals</li>
+                    <li class="nav__link" id="nav-popular">New & Popular</li>
+                    <li class="nav__link" id="nav-list">My List</li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <div class="search-box">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <input type="text" class="search-txt" placeholder="Titles, people, genres" />
+                </div>
+                <div class="nav__text" id="nav-kids">Children</div>
+                <i class="fas fa-bell nav__icon"></i>
+                <div class="nav__avatar-container" id="nav-avatar-container">
+                    <img class="nav__avatar"
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Avatar">
+                    <i class="fas fa-caret-down nav__caret"></i>
+                    <div class="nav__dropdown" id="nav-dropdown">
+                        <div class="nav__dropdown-arrow"></div>
+                        <div class="nav__dropdown-profile">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                                alt="Avatar">
+                            <span>User</span>
+                        </div>
+                        <div class="nav__dropdown-links">
+                            <a href="#">Manage Profiles</a>
+                            <a href="#">Exit Kids</a>
+                            <a href="#">Account</a>
+                            <a href="#">Help Center</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="search-results-container" style="display: none; padding-top: 80px; padding-left: 4%;">
+            <div class="row">
+                <h2 class="row__title">Search Results</h2>
+                <div class="row__posters" id="search-results"></div>
+            </div>
+        </div>
+
+        <!-- Banner -->
+        <header class="banner" id="banner">
+            <div class="banner__contents">
+                <h1 class="banner__title" id="banner-title">Loading...</h1>
+                <div class="banner__buttons">
+                    <button class="banner__button"><i class="fas fa-play"></i> Play</button>
+                    <button class="banner__button"><i class="fas fa-plus"></i> My List</button>
+                </div>
+                <h1 class="banner__description" id="banner-description">
+                    Loading description...
+                </h1>
+            </div>
+            <div class="banner--fadeBottom"></div>
+        </header>
+
+        <!-- Rows -->
+        <div id="rows-container">
+            <!-- Rows will be populated by JS -->
+        </div>
+
+        <!-- My List Container (Hidden by default) -->
+        <div id="my-list-container" style="display: none; padding-top: 80px;">
+            <div class="row">
+                <h2 class="row__title">My List</h2>
+                <div class="row__posters" id="my-list-posters"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__socials">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <ul class="footer__links">
+                <li>Audio and Subtitles</li>
+                <li>Audio Description</li>
+                <li>Help Center</li>
+                <li>Gift Cards</li>
+                <li>Media Center</li>
+                <li>Investor Relations</li>
+                <li>Jobs</li>
+                <li>Terms of Use</li>
+                <li>Privacy</li>
+                <li>Legal Notices</li>
+                <li>Cookie Preferences</li>
+                <li>Corporate Information</li>
+                <li>Contact Us</li>
+            </ul>
+            <button class="footer__service-code">Service Code</button>
+            <div class="footer__copyright">
+                &copy; 1997-2025 Netflix, Inc.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Movie Details Modal -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title">Movie Title</h2>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Movie Poster">
+                <div class="modal-info">
+                    <p id="modal-overview">Overview...</p>
+                    <div class="modal-details">
+                        <p><strong>Release Date:</strong> <span id="modal-date"></span></p>
+                        <p><strong>Rating:</strong> <span id="modal-rating"></span>/10</p>
+                        <p><strong>Director:</strong> <span id="modal-director">Loading...</span></p>
+                        <p><strong>Cast:</strong> <span id="modal-cast">Loading...</span></p>
+                    </div>
+                    <div id="trailer-container" style="margin-top: 20px;">
+                        <!-- YouTube Trailer will be embedded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo"
+                class="logo">
+        </div>
+        <div class="login-body">
+            <div class="login-box">
+                <h1>Sign In</h1>
+                <form id="login-form">
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email or phone number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <button type="submit" class="signin-btn">Sign In</button>
+                    <div class="login-help">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#">Need help?</a>
+                    </div>
+                </form>
+                <div class="login-footer">
+                    <p class="signup-now">New to Netflix? <a href="#">Sign up now</a>.</p>
+                    <p class="recaptcha">This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
+                </div>
+            </div>
+        </div>
+        <div class="login-background-overlay"></div>
+        <img class="login-background"
+            src="https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+            alt="Background">
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
